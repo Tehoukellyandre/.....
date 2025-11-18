@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* 1. Définir les Keyframes : C'est ce qui manquait !
+     Ceci dit au navigateur COMMENT animer (du haut vers le centre). 
+*/
+@keyframes slideDown {
+  from {
+    /* Cache le texte en haut et le rend invisible */
+    opacity: 0;
+    transform: translateY(-100px); 
+  }
+  to {
+    /* Ramène le texte à sa position normale et le rend visible */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landingPage {
+    background: url('./assets/car.jpg') no-repeat center center / cover;
+    /* 2. Ajout pour le Centrage : Permet de centrer les éléments enfants (le texte) */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column; 
+}
+
+.animatedText {
+    animation: slideDown 1s ease-out forwards;
+}
+
+/* Vous pouvez ignorer cette partie si vous n'avez pas de body */
+/* body {
+    margin: 0; 
+    padding: 0;
+} */
