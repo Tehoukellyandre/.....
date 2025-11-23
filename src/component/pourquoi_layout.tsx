@@ -25,10 +25,10 @@ const slideUpVariants = {
         y: 0,
         transition: {
             duration: 0.7,
-            ease: "easeOut",
         }
     },
-};
+} ;
+
 
 // Variant pour les éléments de la liste (apparition en décalé)
 const listContainerVariants = {

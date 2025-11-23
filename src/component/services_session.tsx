@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardActionArea, CardContent, Typography, Box as MuiBox } from '@mui/material';
 import { Car as CarIcon, Shield as ShieldIcon, Clock as ClockIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
 import { motion } from 'framer-motion'; 
@@ -56,16 +55,20 @@ const containerVariants = {
 // Variants pour chaque carte (effet de glissement vers le haut)
 const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-        opacity: 1, 
+    visible: {
+        opacity: 1,
         y: 0,
         transition: {
-            type: 'spring',
-            stiffness: 100,
-            damping: 10,
+            y: {
+                stiffness: 100,
+                damping: 10,
+            },
+            opacity: { duration: 0.3 }
         }
-    },
-};
+    }
+} ;
+
+
 
 // --- Composant Principal ---
 export function ServicesSection() {
