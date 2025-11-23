@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-
+import { Link } from '@tanstack/react-router'
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -27,7 +27,46 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   boxShadow: (theme.vars || theme).shadows[1],
   padding: '8px 12px',
 }));
-
+ 
+const Navigation =()=>{
+   return (
+    <>
+     <MenuItem>
+                    <Link
+                      to="/accueil"
+                      activeProps={{
+                        className: 'font-bold',
+                      }}
+                    >
+                      ACCUEIL
+                    </Link>
+                </MenuItem>
+                <MenuItem>
+                    SUIVI DE COMMANDE
+                </MenuItem>
+                <MenuItem>
+                  <Link
+                      to="/avis"
+                      activeProps={{
+                        className: 'font-bold',
+                      }}
+                  >
+                   AVIS
+                  </Link>  
+                </MenuItem>
+                <MenuItem>
+                  <Link
+                      to="/contact"
+                      activeProps={{
+                        className: 'font-bold',
+                      }}
+                  >
+                  CONTACT
+                  </Link>
+                </MenuItem>
+    </>
+   )
+}
 export  function Header() {
   const [open, setOpen] = React.useState(false);
 
@@ -49,10 +88,7 @@ export  function Header() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent : 'flex-end', px: 2 }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem>ACCUEIL</MenuItem>
-                <MenuItem>SUIVI DE COMMANDE</MenuItem>
-                <MenuItem>AVIS</MenuItem>
-                <MenuItem>CONTACT</MenuItem>
+              <Navigation />
             </Box>
           </Box>
           <Box
@@ -63,7 +99,14 @@ export  function Header() {
             }}
           >
             <Button color="primary" variant="contained" size="small">
+                <Link
+                      to="/conditions"
+                      activeProps={{
+                        className: 'font-bold',
+                      }}
+                >
                 Nos Conditions
+                </Link>
             </Button>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
@@ -92,14 +135,19 @@ export  function Header() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>ACCUEIL</MenuItem>
-                <MenuItem>SUIVI DE COMMANDE</MenuItem>
-                <MenuItem>AVIS</MenuItem>
-                <MenuItem>CONTACT</MenuItem>
+                 <Navigation />
+
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
-                  <Button color="success" variant="contained" fullWidth>
+                  <Button color="primary" variant="contained" fullWidth>
+                    <Link
+                      to="/conditions"
+                      activeProps={{
+                        className: 'font-bold',
+                      }}
+                    >
                     Nos Conditions
+                    </Link> 
                   </Button>
                 </MenuItem>
               </Box>

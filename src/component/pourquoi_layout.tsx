@@ -1,6 +1,7 @@
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import garage from "../assets/garage.jpg"
+import garage from "../assets/image/garage.webp"
+import { QualiteCards } from './choix_session';
 
 // ⚠️ Assurez-vous d'avoir installé framer-motion : npm install framer-motion
 
@@ -47,10 +48,8 @@ const listItemVariants = {
 // --- Composant Principal ---
 export function FeaturesSection() {
     
-    // Définition des couleurs clés pour le thème sombre luxe
     const ACCENT_BLUE = '#4A90E2'; // Bleu accentué
     const BG_DARK_LUXE = '#121212'; // Arrière-plan noir de luxe / Charbon très foncé
-    const TEXT_COLOR = '#FFFFFF'; // Texte principal blanc
     const TEXT_MUTED_COLOR = '#A0AEC0'; // Gris clair pour le texte secondaire
 
     return (
@@ -139,16 +138,16 @@ export function FeaturesSection() {
                         <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 md:w-5/6 lg:w-full bg-gray-900/90 backdrop-blur-sm rounded-xl p-6 border border-gray-700 shadow-2xl">
                             <div className="grid grid-cols-3 gap-4 text-center">
                                 <div>
+                                    <div className="text-3xl font-extrabold" style={{ color: ACCENT_BLUE }}>100%</div>
+                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Notre Fiabilité</div>
+                                </div>
+                                <div>
                                     <div className="text-3xl font-extrabold" style={{ color: ACCENT_BLUE }}>98%</div>
-                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Fiabilité</div>
+                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Qualité et performances de nos vehicules</div>
                                 </div>
                                 <div>
-                                    <div className="text-3xl font-extrabold" style={{ color: ACCENT_BLUE }}>95%</div>
-                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Qualité</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-extrabold" style={{ color: ACCENT_BLUE }}>92%</div>
-                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Rapidité</div>
+                                    <div className="text-3xl font-extrabold" style={{ color: ACCENT_BLUE }}>99%</div>
+                                    <div className="text-xs mt-1" style={{ color: TEXT_MUTED_COLOR }}>Notre Rapidité  </div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +155,9 @@ export function FeaturesSection() {
                 </div>
             </div>
             {/* Ajout d'espace supplémentaire pour la carte flottante */}
-            <div className='pb-16 lg:pb-0'></div> 
+            <div className='pb-16 lg:pb-0'>
+                <QualiteCards />    
+            </div> 
         </section>
     );
 }

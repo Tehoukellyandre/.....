@@ -77,7 +77,7 @@ export function ServicesSection() {
         // 1. Section Hero & Service (fond noir)
         <section 
             id="services" 
-            className="bg-[#000000] py-20 md:py-32 px-4" // CHANGÉ : Le fond est maintenant noir pur
+            className="bg-[#121212] py-20 md:py-32 px-4" // CHANGÉ : Le fond est maintenant noir pur
         >
             <div className="container mx-auto max-w-6xl">
                 
