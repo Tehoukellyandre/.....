@@ -13,6 +13,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConditionsRouteImport } from './routes/conditions'
 import { Route as AvisRouteImport } from './routes/avis'
 import { Route as AccueilRouteImport } from './routes/accueil'
+import { Route as IndexRouteImport } from './routes/index'
 
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -34,14 +35,21 @@ const AccueilRoute = AccueilRouteImport.update({
   path: '/accueil',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/accueil': typeof AccueilRoute
   '/avis': typeof AvisRoute
   '/conditions': typeof ConditionsRoute
   '/contact': typeof ContactRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/accueil': typeof AccueilRoute
   '/avis': typeof AvisRoute
   '/conditions': typeof ConditionsRoute
@@ -49,6 +57,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/accueil': typeof AccueilRoute
   '/avis': typeof AvisRoute
   '/conditions': typeof ConditionsRoute
@@ -56,13 +65,14 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/accueil' | '/avis' | '/conditions' | '/contact'
+  fullPaths: '/' | '/accueil' | '/avis' | '/conditions' | '/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/accueil' | '/avis' | '/conditions' | '/contact'
-  id: '__root__' | '/accueil' | '/avis' | '/conditions' | '/contact'
+  to: '/' | '/accueil' | '/avis' | '/conditions' | '/contact'
+  id: '__root__' | '/' | '/accueil' | '/avis' | '/conditions' | '/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   AccueilRoute: typeof AccueilRoute
   AvisRoute: typeof AvisRoute
   ConditionsRoute: typeof ConditionsRoute
@@ -99,10 +109,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccueilRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   AccueilRoute: AccueilRoute,
   AvisRoute: AvisRoute,
   ConditionsRoute: ConditionsRoute,
