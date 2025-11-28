@@ -118,7 +118,7 @@ export function ConditionsPage() {
 
               {/* Carte Standard DOM-TOM */}
               <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-sm font-semibold text-amber-600 mb-2">LIVRAISON STANDARD DOM-TOM</div>
+                <div className="text-sm font-semibold text-amber-600 mb-2">LIVRAISON STANDARD  EUROPE DOM-TOM</div>
                 <div className="text-3xl font-bold text-slate-900 mb-2">2000€</div>
                 <div className="text-slate-600 text-sm mb-4">Délai: 4-5 semaines</div>
                 <div className="text-slate-600 text-sm leading-relaxed">
@@ -138,7 +138,7 @@ export function ConditionsPage() {
 
               {/* Carte VIP DOM-TOM (sur fond sombre) */}
               <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-xl p-6 shadow-xl">
-                <div className="text-sm font-semibold text-amber-400 mb-2">LIVRAISON VIP DOM-TOM</div>
+                <div className="text-sm font-semibold text-amber-400 mb-2">LIVRAISON VIP  EUROPE DOM-TOM</div>
                 <div className="text-3xl font-bold text-white mb-2">3500€</div>
                 <div className="text-slate-300 text-sm mb-4">Délai: 18 jours maximum</div>
                 <div className="text-slate-300 text-sm leading-relaxed">
