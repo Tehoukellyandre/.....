@@ -99,10 +99,10 @@ export function ServicesSection() {
                         Nos Services
                     </span>
                     <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
-                        L'aventure automobile commence ici
+                        {/* L'aventure commence ici */}
                     </h2>
                     <p className="text-lg text-gray-300 max-w-3xl mx-auto text-pretty">
-                        Chez AguilAuto SAS, nous vous accompagnons dans le choix de votre voiture avec un service de livraison à domicile.
+                        {/* Chez AguilAuto SAS, nous vous accompagnons dans le choix de votre voiture avec un service de livraison à domicile. */}
                     </p>
                 </motion.div>
 
