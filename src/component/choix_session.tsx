@@ -64,7 +64,7 @@ const cardData = [
   {
     title: "Financement Personnalisé",
     content: "Nous comprenons que l'achat d'une voiture peut être un investissement important, c'est pourquoi nous proposons des solutions de financement flexibles et personnalisées. Notre équipe financière est là pour vous aider à trouver le plan qui correspond le mieux à vos besoins et à votre budget, afin que vous puissiez conduire la voiture de vos rêves sans souci.",
-    isBlue: true, // La carte centrale est la carte bleue
+    isBlue: false, // La carte centrale est la carte bleue
   },
   {
     title: "Assistance à l'Importation",
