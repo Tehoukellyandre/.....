@@ -1,9 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from  '@tanstack/react-router'
+import { ConditionsPage} from '../component/condition_session'
 
 export const Route = createFileRoute('/conditions')({
-  component: RouteComponent,
+  component: ConditionsPage,
 })
 
-function RouteComponent() {
-  return <div>Hello "/conditions"!</div>
-}
+
