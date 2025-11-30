@@ -28,7 +28,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   padding: '8px 12px',
 }));
  
-const Navigation =({toggleDrawer}:{toggleDrawer ?: ((state:boolean)=>void)})=>{
+const Navigation =()=>{
    return (
     <>
      <MenuItem>
