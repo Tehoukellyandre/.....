@@ -28,42 +28,47 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   padding: '8px 12px',
 }));
  
-const Navigation =()=>{
+const Navigation =({toggleDrawer}:{toggleDrawer ?: ((state:boolean)=>void)})=>{
    return (
     <>
      <MenuItem>
-                    <Link
-                      to="/accueil"
-                      activeProps={{
-                        className: 'font-bold',
-                      }}
-                    >
-                      ACCUEIL
-                    </Link>
-                </MenuItem>
-                <MenuItem>
-                    SUIVI DE COMMANDE
-                </MenuItem>
-                <MenuItem>
-                  <Link
-                      to="/avis"
-                      activeProps={{
-                        className: 'font-bold',
-                      }}
-                  >
-                   AVIS
-                  </Link>  
-                </MenuItem>
-                <MenuItem>
-                  <Link
-                      to="/contact"
-                      activeProps={{
-                        className: 'font-bold',
-                      }}
-                  >
-                  CONTACT
-                  </Link>
-                </MenuItem>
+        <Link
+          to="/accueil"
+          activeProps={{
+            className: 'font-bold',
+          }}
+          onClick={toggleDrawer?.(false) }
+        >
+          ACCUEIL
+        </Link>
+    </MenuItem>
+    <MenuItem>
+        SUIVI DE COMMANDE
+    </MenuItem>
+    <MenuItem>
+      <Link
+          to="/avis"
+          activeProps={{
+            className: 'font-bold',
+          }}
+          onClick={toggleDrawer?.(false) }
+
+
+      >
+        AVIS
+      </Link>  
+    </MenuItem>
+    <MenuItem>
+      <Link
+          to="/contact"
+          activeProps={{
+            className: 'font-bold',
+          }}
+        onClick={toggleDrawer?.(false) }
+      >
+      CONTACT
+      </Link>
+    </MenuItem>
     </>
    )
 }
@@ -135,11 +140,11 @@ export  function Header() {
                   </IconButton>
                 </Box>
 
-                 <Navigation />
+                 <Navigation toggleDrawer={toggleDrawer} />
 
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
+                  <Button color="primary" variant="contained" fullWidth onClick={toggleDrawer(false)}>
                     <Link
                       to="/conditions"
                       activeProps={{

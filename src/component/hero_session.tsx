@@ -1,9 +1,10 @@
-import { Box, Typography, Button, IconButton } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { styled } from '@mui/material/styles';
 import Routier from '../assets/image/routier.webp'
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { Link } from '@tanstack/react-router';
 
 
 // --- Composant Conteneur de la Section Hero (Pour les styles de base) ---
@@ -23,6 +24,7 @@ const ContentColumn = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
   display: 'flex',
   flexDirection: 'column',
+  gap : '1.5rem',
   justifyContent: 'center',
   padding: theme.spacing(8),
   
@@ -139,21 +141,17 @@ export function HeroSection() {
                 </motion.div>
             ))}
         </motion.div>
-        <Button 
-          variant="contained" 
-          color="primary" 
-          size="large"
-          sx={{ 
-            marginTop : '50px' ,
-            width: '200px', // Largeur fixe pour le bouton
-            backgroundColor: '#0070c7', // Bleu spécifique
-            '&:hover': {
-                backgroundColor: '#005bb5',
-            }
+        {/* <br /> */}
+        <Link 
+          to="/conditions"
+          className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-10 py-5 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-2xl border border-primary/20 gradient-shift"
+          activeProps={{
+          className: 'font-bold',
           }}
         >
          NOS CONDITIONS
-        </Button>
+        </Link>
+        
       </ContentColumn>
       
       {/* 2. Colonne de l'Image Droite */}

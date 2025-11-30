@@ -106,11 +106,12 @@ export function FeaturesSection() {
                                 </motion.div>
                             ))}
                         </motion.div>
-                        
+                        <br />
                         {/* Bouton d'appel à l'action */}
                         <button 
-                            className="mt-10 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
-                            style={{ backgroundColor: ACCENT_BLUE }}
+                            // className="mt-10 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+                            // style={{ backgroundColor: ACCENT_BLUE }}
+                            className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-10 py-5 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-2xl border border-primary/20 gradient-shift"
                         >
                             Découvrir nos catalogues
                         </button>

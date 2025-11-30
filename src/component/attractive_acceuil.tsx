@@ -1,4 +1,4 @@
-import { Box, Button,  Typography } from '@mui/material';
+import { Box,   Typography } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 
 export function AttractiveCar() {
@@ -36,16 +36,15 @@ export function AttractiveCar() {
                   Chez AguilAuto SAS, nous vous accompagnons dans le choix de votre voiture avec un service de livraison à domicile.
 
                 </Typography>
-                <Button color="primary" variant="contained"  sx={{width: "200px" }}>
                     <Link
                       to="/contact"
+                      className="inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-10 py-5 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-2xl border border-primary/20 gradient-shift"
                       activeProps={{
                         className: 'font-bold',
                       }}
                     >
                     Nous Contacter
                     </Link> 
-                </Button>
 
             </Box>
         </Box>

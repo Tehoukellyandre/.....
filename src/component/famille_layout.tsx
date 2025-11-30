@@ -6,8 +6,7 @@ export function FamilleInteret() {
   const slides = [
     {
         image: familleOne,
-        title: "Notre objectif",
-        subtitle: "Vous apporter le confort que vous et votre famille méritez",
+        title: "Vous apporter le confort que vous et votre famille méritez",
     } ,
     { 
         image: familleTwo,
@@ -45,11 +44,7 @@ export function FamilleInteret() {
                   <h2 className="text-2xl md:text-4xl font-bold drop-shadow-lg">
                     {slide.title}
                   </h2>
-                  {slide.subtitle && (
-                    <p className="mt-2 text-sm md:text-lg drop-shadow-md">
-                      {slide.subtitle}
-                    </p>
-                  )}
+                 
                 </div>
               </div>
             )}
