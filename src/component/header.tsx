@@ -37,7 +37,6 @@ const Navigation =({toggleDrawer}:{toggleDrawer ?: ((state:boolean)=>void)})=>{
           activeProps={{
             className: 'font-bold',
           }}
-          onClick={toggleDrawer?.(false) }
         >
           ACCUEIL
         </Link>
@@ -51,9 +50,6 @@ const Navigation =({toggleDrawer}:{toggleDrawer ?: ((state:boolean)=>void)})=>{
           activeProps={{
             className: 'font-bold',
           }}
-          onClick={toggleDrawer?.(false) }
-
-
       >
         AVIS
       </Link>  
@@ -64,7 +60,6 @@ const Navigation =({toggleDrawer}:{toggleDrawer ?: ((state:boolean)=>void)})=>{
           activeProps={{
             className: 'font-bold',
           }}
-        onClick={toggleDrawer?.(false) }
       >
       CONTACT
       </Link>
@@ -140,7 +135,42 @@ export  function Header() {
                   </IconButton>
                 </Box>
 
-                 <Navigation toggleDrawer={toggleDrawer} />
+                  <MenuItem>
+                      <Link
+                        to="/accueil"
+                        activeProps={{
+                          className: 'font-bold',
+                        }}
+                        onClick={toggleDrawer(false) }
+                      >
+                        ACCUEIL
+                      </Link>
+                  </MenuItem>
+                  <MenuItem>
+                      SUIVI DE COMMANDE
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                        to="/avis"
+                        activeProps={{
+                          className: 'font-bold',
+                        }}
+                        onClick={toggleDrawer(false) }
+                    >
+                      AVIS
+                    </Link>  
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                        to="/contact"
+                        activeProps={{
+                          className: 'font-bold',
+                        }}
+                      onClick={toggleDrawer(false) }
+                    >
+                    CONTACT
+                    </Link>
+                  </MenuItem>
 
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
