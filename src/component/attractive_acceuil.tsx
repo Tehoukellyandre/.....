@@ -20,10 +20,15 @@ export function AttractiveCar() {
              }}
             > 
                 
-                <Typography 
-                  variant="h3" 
-                  component="h3" 
-                  sx={{ color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.7)'  }}
+                <Typography
+                  variant="h3"
+                  component="h3"
+                  sx={{
+                    color: 'white',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.7)',
+                    whiteSpace: 'nowrap',          // Empêche le retour à la ligne
+                    fontSize: 'clamp(18px, 5vw, 36px)', // Ajuste la taille automatiquement selon l'écran
+                  }}
                 >
                   L'aventure automobile commence ici
 

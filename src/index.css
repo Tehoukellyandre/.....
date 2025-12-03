@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import 'leaflet/dist/leaflet.css';
 /* 1. Définir les Keyframes : C'est ce qui manquait !*/
 @keyframes slideDown {
   from {
