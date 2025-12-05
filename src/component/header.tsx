@@ -12,6 +12,9 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Link } from '@tanstack/react-router'
+import { SuiviCommande } from './suivi' ;
+import { useState } from 'react';
+
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -29,6 +32,9 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
  
 const Navigation =()=>{
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
    return (
     <>
      <MenuItem>
@@ -41,9 +47,7 @@ const Navigation =()=>{
           ACCUEIL
         </Link>
     </MenuItem>
-    <MenuItem>
-        SUIVI DE COMMANDE
-    </MenuItem>
+    <SuiviCommande open = {open} handleClose= {handleClose}  handleOpen = {handleOpen}/>
     <MenuItem>
       <Link
           to="/avis"
@@ -68,7 +72,7 @@ const Navigation =()=>{
    )
 }
 export  function Header() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
