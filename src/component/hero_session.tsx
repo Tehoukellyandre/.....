@@ -110,15 +110,18 @@ export function HeroSection() {
       
       {/* 1. Colonne de Contenu Gauche */}
       <ContentColumn>
-        <Typography 
+        
+        {/* <Typography 
           variant="h3" 
           component="h1" 
           fontWeight="bold"
           gutterBottom // Ajoute une marge en bas
         >
           La référence de l'import automobile
-        </Typography>
-        
+        </Typography> */}
+        <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
+          La référence de l'import automobile
+        </h2>
         <Typography variant="body1" sx={{ mb: 4 }}>
           Fondée avec la passion pour l'automobile et l'engagement envers l'excellence, notre entreprise s'efforce de vous fournir des véhicules de qualité supérieure et un service clientèle exceptionnel à chaque étape de votre parcours.
         </Typography>
