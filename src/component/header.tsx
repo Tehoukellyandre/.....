@@ -76,7 +76,9 @@ export  function Header() {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
-
+    const [openSuivi, setOpenSuivi] = useState(false);
+    const handleOpen = () => setOpenSuivi(true);
+    const handleClose = () => setOpenSuivi(false);
   return (
     <AppBar
       position="fixed"
@@ -149,9 +151,7 @@ export  function Header() {
                         ACCUEIL
                       </Link>
                   </MenuItem>
-                  <MenuItem>
-                      SUIVI DE COMMANDE
-                  </MenuItem>
+                  <SuiviCommande open = {openSuivi} handleClose= {handleClose}  handleOpen = {handleOpen}/>
                   <MenuItem>
                     <Link
                         to="/avis"

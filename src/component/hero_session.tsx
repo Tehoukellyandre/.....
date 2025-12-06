@@ -110,15 +110,6 @@ export function HeroSection() {
       
       {/* 1. Colonne de Contenu Gauche */}
       <ContentColumn>
-        
-        {/* <Typography 
-          variant="h3" 
-          component="h1" 
-          fontWeight="bold"
-          gutterBottom // Ajoute une marge en bas
-        >
-          La référence de l'import automobile
-        </Typography> */}
         <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
           La référence de l'import automobile
         </h2>
