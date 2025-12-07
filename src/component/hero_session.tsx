@@ -110,7 +110,11 @@ export function HeroSection() {
       
       {/* 1. Colonne de Contenu Gauche */}
       <ContentColumn>
-        <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
+        <h2 
+        style={{
+          fontSize: 'clamp(18px, 5vw, 36px)', // Ajuste la taille automatiquement selon l'écran
+        }} 
+        className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
           La référence de l'import automobile
         </h2>
         <Typography variant="body1" sx={{ mb: 4 }}>

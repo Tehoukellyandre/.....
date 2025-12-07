@@ -77,7 +77,7 @@ export  function Header() {
     setOpen(newOpen);
   };
     const [openSuivi, setOpenSuivi] = useState(false);
-    const handleOpen = () => { toggleDrawer(false) ; setOpenSuivi(true)};
+    const handleOpen = () => {  setOpenSuivi(true)};
     const handleClose = () => setOpenSuivi(false);
   return (
     <AppBar

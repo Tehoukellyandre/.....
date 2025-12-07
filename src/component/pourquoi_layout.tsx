@@ -75,7 +75,11 @@ export function FeaturesSection() {
                         </span>
                         
                         {/* Titre principal */}
-                        <h2 className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
+                        <h2 
+                        style={{
+                            fontSize: 'clamp(18px, 5vw, 36px)', // Ajuste la taille automatiquement selon l'écran
+                        }} 
+                        className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
                             Une expérience d'achat automobile unique
                         </h2>
                         
