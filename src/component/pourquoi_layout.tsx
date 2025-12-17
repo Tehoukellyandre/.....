@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import garage from "../assets/image/garage.webp"
 import { QualiteCards } from './choix_session';
 
-// ⚠️ Assurez-vous d'avoir installé framer-motion : npm install framer-motion
 
 // --- Données des fonctionnalités ---
 const features = [
@@ -15,7 +14,7 @@ const features = [
   'Reprise de votre ancien véhicule',
 ];
 
-// --- Variants pour l'animation Framer Motion ---
+
 
 // Variant de base pour les éléments qui glissent vers le haut
 const slideUpVariants = {
@@ -48,25 +47,22 @@ const listItemVariants = {
 // --- Composant Principal ---
 export function FeaturesSection() {
     
-    const ACCENT_BLUE = '#4A90E2'; // Bleu accentué
-    const BG_DARK_LUXE = '#121212'; // Arrière-plan noir de luxe / Charbon très foncé
-    const TEXT_MUTED_COLOR = '#A0AEC0'; // Gris clair pour le texte secondaire
+    const ACCENT_BLUE = '#4A90E2'; 
+    const BG_DARK_LUXE = '#121212'; 
+    const TEXT_MUTED_COLOR = '#A0AEC0'; 
 
     return (
-        // APPLIQUÉ : Utilisation du fond noir luxe
-        <section className={`py-20 md:py-32 px-4`} style={{ backgroundColor: BG_DARK_LUXE }}>
+        <section className={`py-10 md:py-32 px-4`} style={{ backgroundColor: BG_DARK_LUXE }}>
             <div className="container mx-auto max-w-6xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     
-                    {/* Colonne Gauche : Texte et Liste des fonctionnalités */}
                     <motion.div
                         variants={slideUpVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="text-white" // Couleur du texte principal en blanc
+                        className="text-white" 
                     >
-                        {/* Sous-titre */}
                         <span 
                             className="text-sm font-semibold uppercase tracking-wider"
                             style={{ color: '#808081ff' }}
@@ -74,10 +70,9 @@ export function FeaturesSection() {
                             Pourquoi nous choisir
                         </span>
                         
-                        {/* Titre principal */}
                         <h2 
                         style={{
-                            fontSize: 'clamp(18px, 5vw, 36px)', // Ajuste la taille automatiquement selon l'écran
+                            fontSize: 'clamp(18px, 5vw, 36px)', 
                         }} 
                         className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
                             Une expérience d'achat automobile unique
@@ -111,7 +106,6 @@ export function FeaturesSection() {
                             ))}
                         </motion.div>
                         <br />
-                        {/* Bouton d'appel à l'action */}
                         <button 
                             // className="mt-10 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
                             // style={{ backgroundColor: ACCENT_BLUE }}
@@ -129,9 +123,7 @@ export function FeaturesSection() {
                         viewport={{ once: true, amount: 0.3 }}
                         className="relative"
                     >
-                        {/* Conteneur de l'image (Remplacé par un placeholder pour la compatibilité) */}
                         <div className="aspect-video lg:aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                            {/* Utilisation d'une image placeholder */}
                             <img
                                 src={garage}
                                 alt="Showroom de voitures de luxe"
@@ -139,7 +131,6 @@ export function FeaturesSection() {
                             />
                         </div>
                         
-                        {/* APPLIQUÉ : Carte flottante des statistiques en mode sombre */}
                         <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-11/12 md:w-5/6 lg:w-full bg-gray-900/90 backdrop-blur-sm rounded-xl p-6 border border-gray-700 shadow-2xl">
                             <div className="grid grid-cols-3 gap-4 text-center">
                                 <div>
@@ -159,8 +150,7 @@ export function FeaturesSection() {
                     </motion.div>
                 </div>
             </div>
-            {/* Ajout d'espace supplémentaire pour la carte flottante */}
-            <div className='pb-16 lg:pb-0'>
+            <div className='pb-5 lg:pb-0'>
                 <QualiteCards />    
             </div> 
         </section>

@@ -77,10 +77,9 @@ export function ServicesSection() {
     const ACCENT_BLUE = '#0f1011ff'; 
 
     return (
-        // 1. Section Hero & Service (fond noir)
         <section 
             id="services" 
-            className="bg-[#121212] py-20 md:py-32 px-4" // CHANGÉ : Le fond est maintenant noir pur
+            className="bg-[#121212] py-12 md:py-32 px-4" 
         >
             <div className="container mx-auto max-w-6xl">
                 
@@ -106,12 +105,11 @@ export function ServicesSection() {
                     </p>
                 </motion.div>
 
-                {/* 3. Conteneur des Cartes (MuiBox enveloppé dans motion.div) */}
                 <MuiBox
                     component={motion.div}
                     variants={containerVariants}
                     initial="hidden"
-                    whileInView="visible" // Déclencheur de l'animation lors de l'apparition dans la vue
+                    whileInView="visible" 
                     viewport={{ once: true, amount: 0.2 }} 
                     sx={{
                         width: '100%',
@@ -122,7 +120,6 @@ export function ServicesSection() {
                             lg: 'repeat(4, 1fr)',
                         },
                         gap: 3,
-                        // Les cartes restent blanches pour un contraste maximal sur le fond noir
                         '& > div > .MuiPaper-root': {
                             backgroundColor: 'white',
                             color: 'black',
@@ -132,7 +129,6 @@ export function ServicesSection() {
                     {cardServices.map((card) => {
                         const IconComponent = card.icon;
                         return (
-                            // Wrapper motion.div pour chaque carte
                             <motion.div key={card.title} variants={cardVariants}>
                                 <Card elevation={8} sx={{ height: '100%', borderRadius: 3 }}>
                                     <CardActionArea
@@ -141,23 +137,20 @@ export function ServicesSection() {
                                             padding: '16px',
                                             transition: 'transform 0.3s ease-in-out',
                                             '&:hover': {
-                                                backgroundColor: 'rgba(255, 255, 255, 0.05)', // Légèrement plus foncé au survol
-                                                transform: 'translateY(-5px)', // Léger soulèvement au survol
+                                                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                                transform: 'translateY(-5px)', 
                                             },
                                         }}
                                     >
                                         <CardContent
                                             sx={{ height: '100%', display: 'flex', flexDirection: 'column', gap: 2 }}
                                         >
-                                            {/* Icône */}
                                             <IconComponent size={36} style={{ color: ACCENT_BLUE }} />
 
-                                            {/* Titre */}
                                             <Typography gutterBottom variant="h6" component="div" fontWeight="bold">
                                                 {card.title}
                                             </Typography>
 
-                                            {/* Description */}
                                             <Typography variant="body2" color="text.secondary">
                                                 {card.description}
                                             </Typography>

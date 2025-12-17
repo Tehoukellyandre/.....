@@ -1,24 +1,19 @@
 import { Car, Mail, Phone, MapPin } from 'lucide-react';
 import { Box, Typography, Grid, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
 
-// Note: J'utilise 'Box' et 'Grid' de MUI pour la structure et la sémantique, 
-// mais je conserve vos classes Tailwind pour le style (couleur, espacement, etc.).
+
 
 export function Footer() {
-  // Les classes Tailwind sont appliquées via la prop 'className' de MUI/Box/Typography, etc.
   
   return (
     <Box 
       component="footer" 
-    //   bg-black border-t border-border py-12 px-4 text-white
       className="bg-[#121212] border-t border-border py-12 px-4 text-white"
     >
       <Box className="container mx-auto max-w-6xl">
         
-        {/* Grille principale des quatre colonnes */}
         <Grid container spacing={{ xs: 4, md: 8 }} className="mb-8">
           
-          {/* 1. Colonne Logo et Description */}
           <Grid>
             <Box className="flex items-center gap-2 mb-4">
               <Box className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -27,7 +22,7 @@ export function Footer() {
               <Typography 
                 component="span" 
                 className="text-xl font-heading font-bold text-text"
-                sx={{ fontFamily: 'yourHeadingFont, sans-serif' }} // Optionnel: pour intégrer le font-heading
+                sx={{ fontFamily: 'yourHeadingFont, sans-serif' }} 
               >
                 AguilAuto
               </Typography>
@@ -38,7 +33,6 @@ export function Footer() {
             </Box>
           </Grid>
           
-          {/* 2. Colonne Navigation */}
           <Grid >
             <Typography component="h3" className="text-text font-semibold mb-4">
               Navigation
@@ -48,7 +42,7 @@ export function Footer() {
                 <ListItem key={item} disablePadding className="p-0">
                     <Typography 
                       component="a" 
-                      className="text-text-muted hover:text-primary transition-colors cursor-pointer"
+                      className="text-text-muted hover:text-white cursor-pointer"
                       sx={{ textDecoration: 'none' }}
                     >
                       {item}
@@ -78,7 +72,7 @@ export function Footer() {
             <List className="space-y-3 p-0 text-sm">
               {/* Email */}
               <ListItem disablePadding className="p-0">
-                <ListItemIcon className="min-w-0 mr-2">
+                <ListItemIcon className="min-w-0 ">
                   <Mail className="w-4 h-4 text-white" />
                 </ListItemIcon>
                 <ListItemText primary="contact@aguilauto.com" className="text-text-muted" />
@@ -86,7 +80,7 @@ export function Footer() {
               
               {/* Téléphone */}
               <ListItem disablePadding className="p-0">
-                <ListItemIcon className="min-w-0 mr-2">
+                <ListItemIcon className="min-w-0 ">
                   <Phone className="w-4 h-4 text-white" />
                 </ListItemIcon>
                 <ListItemText primary="+33 1 23 45 67 89" className="text-text-muted" />
@@ -94,7 +88,7 @@ export function Footer() {
 
               {/* Adresse */}
               <ListItem disablePadding className="p-0">
-                <ListItemIcon className="min-w-0 mr-2">
+                <ListItemIcon className="min-w-0 ">
                   <MapPin className="w-4 h-4 text-white" />
                 </ListItemIcon>
                 <ListItemText primary="Paris, France" className="text-text-muted" />
