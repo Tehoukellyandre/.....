@@ -7,20 +7,18 @@ import { CheckCircle2 } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 
-// --- Composant Conteneur de la Section Hero (Pour les styles de base) ---
 const HeroContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
-  minHeight: '600px', // Hauteur minimale pour l'effet visuel
+  minHeight: '600px',
   [theme.breakpoints.down('md')]: {
-    flexDirection: 'column', // Empiler les colonnes sur mobile/tablette
+    flexDirection: 'column', 
     minHeight: 'auto',
   },
 }));
 
-// --- Composant Colonne de Contenu Gauche (Gris Sombre) ---
 const ContentColumn = styled(Box)(({ theme }) => ({
-  width: '40%', // 40% de la largeur sur desktop
-  backgroundColor: '#121212', // Gris foncé
+  width: '40%', 
+  backgroundColor: '#121212',
   color: theme.palette.common.white,
   display: 'flex',
   flexDirection: 'column',
@@ -29,27 +27,26 @@ const ContentColumn = styled(Box)(({ theme }) => ({
   padding: theme.spacing(8),
   
   [theme.breakpoints.down('md')]: {
-    width: '100%', // Pleine largeur sur mobile/tablette
+    width: '100%', 
     padding: theme.spacing(4),
   },
 }));
 
-// --- Composant Colonne de l'Image (60% du côté droit) ---
 const ImageColumn = styled(Box)(({ theme }) => ({
   width: '60%',
   backgroundImage: `url(${Routier})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  position: 'relative',     // nécessaire pour placer InfoCard
-  overflow: 'hidden',        // évite débordement de la carte
+  position: 'relative',   
+  overflow: 'hidden',      
 
   [theme.breakpoints.down('md')]: {
     width: '100%',
-    height: '400px',        // hauteur lisible sur mobile
+    height: '400px',   
   },
 
   [theme.breakpoints.down('sm')]: {
-    height: '300px',        // un peu plus compact
+    height: '300px',     
   },
 }));
 
@@ -68,7 +65,7 @@ const InfoCard = styled(Box)(({ theme }) => ({
   zIndex: 10,  // toujours au-dessus de l’image
 
   [theme.breakpoints.down('md')]: {
-    width: '100%',  // 100% sur mobile
+    width: '100%', 
     bottom: 0,
     right: 0,
     padding: theme.spacing(2.5),
@@ -108,11 +105,10 @@ export function HeroSection() {
   return (
     <HeroContainer>
       
-      {/* 1. Colonne de Contenu Gauche */}
       <ContentColumn>
         <h2 
         style={{
-          fontSize: 'clamp(18px, 5vw, 36px)', // Ajuste la taille automatiquement selon l'écran
+          fontSize: 'clamp(18px, 5vw, 36px)', 
         }} 
         className="text-4xl md:text-5xl font-extrabold mt-4 mb-6 text-balance leading-tight">
           La référence de l'import automobile
@@ -152,10 +148,9 @@ export function HeroSection() {
         
       </ContentColumn>
       
-      {/* 2. Colonne de l'Image Droite */}
       <ImageColumn>
         
-        {/* Carte d'Information Orange Positionnée Absolue */}
+        {/* Carte d'Information  Positionnée Absolue */}
         <InfoCard>
           <Box className='flex items-center gap-4'>
             <Box>
@@ -163,7 +158,7 @@ export function HeroSection() {
                 variant="h5" 
                 component="div" 
                 fontWeight="bold"
-                sx={{ lineHeight: 1 }} // Resserre le titre
+                sx={{ lineHeight: 1 }}
                 >
                 AGUILAUTO SAS
                 </Typography>
@@ -173,12 +168,12 @@ export function HeroSection() {
             </Box>
             
             <IconButton 
-                color="inherit" // Utilise la couleur du parent (blanc par défaut)
+                color="inherit"
                 sx={{ 
-                backgroundColor: '#0d9af1', // Couleur Facebook Blue ou similaire
+                backgroundColor: '#0d9af1', 
                 color: 'white',
                 '&:hover': { backgroundColor: '#0c84d1' },
-                p: 1.5, // Padding pour rendre le bouton plus grand
+                p: 1.5, 
                 }}
                 aria-label="Voir le catalogue Facebook"
             >
@@ -193,5 +188,3 @@ export function HeroSection() {
     </HeroContainer>
   );
 }
-
-// export default HeroSection;

@@ -9,25 +9,18 @@ const HoverCard = styled(Card)(({ theme }) => ({
   padding: theme.spacing(2),
   transition: theme.transitions.create(['transform', 'box-shadow']),
 
-  // Styles pour l'animation au survol
   '&:hover': {
-    // Soulèvement (léger décalage vers le haut)
     transform: 'translateY(-4px)',
-    // Augmentation de l'ombre
     boxShadow: theme.shadows[10],
   },
 }));
 
-// --- Composant Carte Thème Bleu (Financement) ---
-// Utilisation de styles différents pour la carte centrale
 const BlueCard = styled(HoverCard)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main, // Couleur primaire de MUI
+  backgroundColor: theme.palette.primary.main,
   color: theme.palette.common.white,
   
-  // Surcharge des styles au survol pour garder le look bleu
   '&:hover': {
     transform: 'translateY(-4px)',
-    // Utilisation d'une ombre blanche ou plus intense pour l'effet
     boxShadow: '0px 10px 15px rgba(255, 255, 255, 0.99)', 
   },
 }));
@@ -54,7 +47,6 @@ const Separator = ({ color }: { color: string }) => (
   </Box>
 );
 
-// --- Les données de vos cartes ---
 const cardData = [
   {
     title: "Inspection et Certification",
@@ -64,7 +56,7 @@ const cardData = [
   {
     title: "Financement Personnalisé",
     content: "Nous comprenons que l'achat d'une voiture peut être un investissement important, c'est pourquoi nous proposons des solutions de financement flexibles et personnalisées. Notre équipe financière est là pour vous aider à trouver le plan qui correspond le mieux à vos besoins et à votre budget, afin que vous puissiez conduire la voiture de vos rêves sans souci.",
-    isBlue: false, // La carte centrale est la carte bleue
+    isBlue: false, 
   },
   {
     title: "Assistance à l'Importation",
@@ -73,7 +65,6 @@ const cardData = [
   },
 ];
 
-// --- Composant Principal d'Affichage ---
 export function QualiteCards() {
   return (
     <Box 

@@ -52,7 +52,7 @@ export function FeaturesSection() {
     const TEXT_MUTED_COLOR = '#A0AEC0'; 
 
     return (
-        <section className={`py-10 md:py-32 px-4`} style={{ backgroundColor: BG_DARK_LUXE }}>
+        <section className={`px-4`} style={{ backgroundColor: BG_DARK_LUXE }}>
             <div className="container mx-auto max-w-6xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     
@@ -150,7 +150,7 @@ export function FeaturesSection() {
                     </motion.div>
                 </div>
             </div>
-            <div className='pb-5 lg:pb-0'>
+            <div className='lg:pb-0'>
                 <QualiteCards />    
             </div> 
         </section>
